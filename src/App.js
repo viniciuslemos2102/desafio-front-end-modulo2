@@ -14,12 +14,12 @@ function App() {
 
   async function handleAddRepository() {   
     const response = await api.post('repositories', {
-          title: `Repositório `,
-          url :"github.viniciuslemos210.com.br",
+          title: 'Repositório ',
+          url :'github.viniciuslemos210.com.br',
           techs: [ 'react', 'node', 'react-native' ] 
         });
         
-        setRepositories([...repositories,response.data]);
+        setRepositories([...repositories, response.data]);
   }
 
   async function handleRemoveRepository(id) {
@@ -39,7 +39,6 @@ function App() {
       {repositories.map( repository => (
          <li key={repository.id}>
            {repository.title}
-           a 1 seg
 
           <button onClick={() => handleRemoveRepository(repository.id)}>
             Remover
